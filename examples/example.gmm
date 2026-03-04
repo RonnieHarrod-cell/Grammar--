@@ -1,0 +1,78 @@
+(
+  A demonstration programme written in G--.
+  Showcases variables, routines, lists, loops, and conditionals.
+)
+
+(── Part 1: Greeting ──────────────────────────────────)
+
+let name be "Ronnie".
+let age be 30.
+
+if age is at least 18 then
+  say "Welcome, " plus name plus "! Jolly good to have you.".
+otherwise
+  say "I'm terribly sorry, but you are too young.".
+end.
+
+(── Part 2: Counting down ─────────────────────────────)
+
+say "Counting down from 5...".
+let countdown be 5.
+whilst countdown is greater than 0 do
+  say countdown.
+  set countdown to countdown minus 1.
+end.
+say "Blast off!".
+
+(── Part 3: Routines ──────────────────────────────────)
+
+define a routine called greet taking title and surname
+  say "How do you do, " plus title plus " " plus surname plus "?".
+end.
+
+perform greet with "Professor", "Higgins".
+perform greet with "Dr", "Watson".
+
+(── Part 4: Lists ─────────────────────────────────────)
+
+let teas be a list of "Earl Grey", "English Breakfast", "Darjeeling".
+add "Assam" to teas.
+remove "Darjeeling" from teas.
+
+say "Available teas (" plus the length of teas plus "):".
+for each tea in teas do
+  say "  - " plus tea.
+end.
+
+say "First on the list: " plus the first item of teas.
+say "Last on the list: " plus the last item of teas.
+
+(── Part 5: Arithmetic ────────────────────────────────)
+
+let score be 0.
+repeat 5 times
+  set score to score plus 7.
+end.
+say "Final score: " plus score.
+
+(── Part 6: Boolean logic ─────────────────────────────)
+
+let is_member be true.
+let has_voucher be false.
+
+if is_member and not has_voucher then
+  say "Welcome, member! Vouchers are available at the front desk.".
+end.
+
+if not is_member or has_voucher then
+  say "Non-members welcome with a valid voucher.".
+otherwise
+  say "Membership confirmed. No voucher required.".
+end.
+
+(── Part 7: Shout and whisper ─────────────────────────)
+
+perform shout with "last orders, please!".
+perform whisper with "QUIET IN THE LIBRARY.".
+
+say "Programme complete. Cheerio!".
