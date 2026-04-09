@@ -3,7 +3,7 @@ G-- (Grammar--) Abstract Syntax Tree Nodes
 """
 
 from dataclasses import dataclass, field
-from typing import Any, Optional
+from typing import Any, Optional, Union
 
 
 # ── Base ──────────────────────────────────────────────────────────────────────
@@ -16,7 +16,7 @@ class Node:
 
 @dataclass
 class NumberLit(Node):
-    value: float | int
+    value: Union[float, int]
 
 @dataclass
 class StringLit(Node):
